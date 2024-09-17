@@ -163,6 +163,11 @@ The assignment alignment guidelines may seem a bit complicated, but in reality t
 ### Variables
 For variables the goal is to show the change and assignment. This is demonstrated in the code below
 ```PHP
+//
+//  Also in the code below pay attention to the {} alignment for all
+//  if statements and the while loop where the closing } aligns with
+//  each opening lines {
+//
 function foo() {
 
     //
@@ -172,10 +177,6 @@ function foo() {
     $someVariable2        = '';
     $someVairable3        = '';
   
-    //
-    //  Also pay attention to the {} alignment for the if statement
-    //  where the closing } aligns with the opening if
-    //
     if ( ... ) {
   
         //
