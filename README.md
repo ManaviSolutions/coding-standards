@@ -213,7 +213,13 @@ As demonstrated in the last code example, it is important to keep \t(tab) per-li
 function foo() {
 
     //
-    //  Array ] is aligned with the opening variable declaration.
+    //  Array ] is aligned with the opening variable declaration,
+    //  and each => is also aligned with the = to keep all params
+    //  being assigned in the same line.
+    //
+    //  @NOTE: There should be at least 1 \s(space) between index
+    //  and the => operator so if necessary move all => by (1) \t
+    //  (tab) to create the needed space.
     //  
     $someVar         = [
 
