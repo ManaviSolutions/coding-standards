@@ -70,31 +70,31 @@ define( "GLOBAL_VAR", null );
 //
 class foo() {
 
-  //
-  //  A public variable
-  //
-  $m_publicVariable;
-
-  //
-  // Can use $mp_ also
-  //
-  private $m_privateVariable;
-
-  //
-  //  Example for static variables within a class
-  //
-  static public $variableName;
-  static private $ms_variableName;
-
-  function bar() {
-
     //
-    //  @NOTE: This is not same as self::$variableName which is static and
-    //  should be called in a static function
+    //  A public variable
     //
-    $variableName  = null;
-
-  }
+    $m_publicVariable;
+  
+    //
+    // Can use $mp_ also
+    //
+    private $m_privateVariable;
+  
+    //
+    //  Example for static variables within a class
+    //
+    static public $variableName;
+    static private $ms_variableName;
+  
+    function bar() {
+  
+        //
+        //  @NOTE: This is not same as self::$variableName which is static and
+        //  should be called in a static function
+        //
+        $variableName  = null;
+  
+    }
 
 }
 ```
@@ -118,10 +118,10 @@ It is absolutely OK to use simple variables such as ```$i, $j, $k``` in the cont
 //
 function someFunctionName( $arg1, $arg2 ) {
 
-  //
-  //  Notice the space above and below this section
-  //  
-  ...
+    //
+    //  Notice the space above and below this section
+    //  
+    ...
 
 }
 ```
@@ -130,35 +130,79 @@ When declaring functions within classes the standard guideline for functions is 
 ```PHP
 class foo {
 
-  private $m_someVariable;
-
-  //
-  //  Some inline functions are also allowed in classes where the function
-  //  body is no more than a single line,  and it is not using any complex
-  //  logic that would require the function to be expanded
-  //
-  function getSomething() { return $m_someVariable; }
-
-  function normalFunction() {
-
-    ...
+    private $m_someVariable;
   
-  }
-
-  //
-  //  Notice the _ in the name
-  //
-  private function _someFunctionName() {
-
-    ...
-
-  }
+    //
+    //  Some inline functions are also allowed in classes where the function
+    //  body is no more than a single line,  and it is not using any complex
+    //  logic that would require the function to be expanded
+    //
+    function getSomething() { return $m_someVariable; }
+  
+    function normalFunction() {
+  
+        ...
+    
+    }
+  
+    //
+    //  Notice the _ in the name
+    //
+    private function _someFunctionName() {
+  
+        ...
+  
+    }
 
 }
 ```
 
 ## Assignment Alignment
-variables
+The assignment alignment guidelines may seem a bit complicated, but in reality the goal is to be able to easily see blocks of similar code that perform assignments - or change a variable. This can be for variables, arrays, and other sections in the code where providing a similar spacing for all lines of code in the block would allow the developer's eye to see the common pattern. In this section we will look at some guideline, but it will not be considered a hard rule as the spacing and alignment can change depending on the context of the code.  Generally the alignment happens within a ```{}``` or ```[]``` section.
+
+### Variables
+For variables the goal is to show the change and assignment. This is demonstrated in the code below
+```PHP
+function foo() {
+
+    //
+    //  These variables' = is aligned with the = 'b' assignment
+    //
+    $someVariable1        = 0;
+    $someVariable2        = '';
+    $someVairable3        = '';
+  
+    //
+    //  Also pay attention to the {} alignment for the if statement
+    //  where the closing } aligns with the opening if
+    //
+    if ( ... ) {
+  
+        //
+        //  This variable's = is aligned with the = 'b' assignment
+        //
+        $someVariable1      = 1;
+    
+        while ( ... ) {
+    
+            if ( ... ) {
+      
+                $someVariable2  = 'b'
+      
+            }    
+      
+            //
+            //  This variable's = is aligned with the = 'b' assignment
+            //
+            $someVariable3    = 'a';
+    
+        }
+  
+    }
+
+}
+```
+
 arrays and functions
 - Tertiary operators should be aligned within a logical block
   ```PHP
