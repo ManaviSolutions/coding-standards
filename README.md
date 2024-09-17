@@ -48,11 +48,11 @@ $varName  = false;
 The scope of a variable will determine certain prefixes and notation for a given variable name:
 - **Global** - Generally global variables are considered to be unaceptable in the code, but in some cases they are a necessary evil, so in these instances a global variable can be declared using the ```$g_```
 - **Define** - It is strongly recommended for ```define()``` to be used instead of global variables when possible, and if necessary. In this case, defines should use all CAP letters and _ for spacing between words
-- **Local** - Local variable definitions should follow the standard guideline and simply be in camel case notation - e.g. ```$variableName```
+- **Local** - Local variable definitions should follow the standard guideline and simply be in camel case notation
 - **Member** - Member variables or class member variables are variables defined within the scope of a class.
-  - **Public** - In this case the prefix ```$m_``` is required - e.g. ```$m_classVariable```
-  - **Private** - (Optional) For private members the prefix ```$mp_``` can be used - e.g. ```private $mp_classVariable```
-  - **Static** - Static members should use the prefix ```$ms_``` on private members and no prefix on public members - e.g. ```static public $arg``` and ```static private $ms_instance```
+  - **Public** - In this case the prefix ```$m_``` is required
+  - **Private** - (Optional) For private members the prefix ```$mp_``` can be used
+  - **Static** - Static members should use the prefix ```$ms_``` on private members and no prefix on public members
 
 ```PHP
 //
