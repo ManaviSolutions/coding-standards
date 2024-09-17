@@ -204,7 +204,7 @@ function foo() {
 }
 ```
 ### Functions & Arrays
-As demonstrated in the last code example, it is important to keep \t(tab) per-line and each nexted ```{}``` level inside a function correct.
+As demonstrated in the last code example, it is important to keep \t(tab) per-line and each nested ```{}``` level inside a function correct.
 ```PHP
 //
 //  Notice in this example that all the lines within the function
@@ -225,6 +225,13 @@ function foo() {
 
         "A"          => true,
         "LongerKey"  => true
+
+    ];
+
+    $array           = [
+
+        [ "example",    "params",        3  ],
+        [ "example2",   "moreParams",    2  ],
 
     ];
     
