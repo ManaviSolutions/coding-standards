@@ -203,13 +203,35 @@ function foo() {
 
 }
 ```
+### Functions & Arrays
+As demonstrated in the last code example, it is important to keep \t(tab) per-line and each nexted ```{}``` level inside a function correct.
+```PHP
+//
+//  Notice in this example that all the lines within the function
+//  are spaced exactly (1) \t(tab) forward from the opening line.
+//
+function foo() {
 
-arrays and functions
-- Tertiary operators should be aligned within a logical block
-  ```PHP
-  //
-  //  Notice how the ? and : align in each line
-  //
-  $a = $var === 1        ? true            : false;
-  $b = $longerVar === 2  ? "result found"  : "error"; 
-  ```
+    //
+    //  Array ] is aligned with the opening variable declaration.
+    //  
+    $someVar         = [
+
+        "A"          => true,
+        "LongerKey"  => true
+
+    ];
+    
+    return;
+
+}
+```
+
+Tertiary operators should be aligned within a logical block
+```PHP
+//
+//  Notice how the ? and : align in each line
+//
+$a = $var === 1        ? true            : false;
+$b = $longerVar === 2  ? "result found"  : "error"; 
+```
