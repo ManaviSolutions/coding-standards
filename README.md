@@ -125,9 +125,37 @@ function someFunctionName( $arg1, $arg2 ) {
 
 }
 ```
-class functions
-  general
-  private
+
+When declaring functions within classes the standard guideline for functions is used except in cases where ```private/protected``` member functions are defined. In this case a prefix of ```_``` is added to the function name. Also, in some limited cases inline function can be declared and implemented in a single line.
+```PHP
+class foo {
+
+  private $m_someVariable;
+
+  //
+  //  Some inline functions are also allowed in classes where the function
+  //  body is no more than a single line,  and it is not using any complex
+  //  logic that would require the function to be expanded
+  //
+  function getSomething() { return $m_someVariable; }
+
+  function normalFunction() {
+
+    ...
+  
+  }
+
+  //
+  //  Notice the _ in the name
+  //
+  private function _someFunctionName() {
+
+    ...
+
+  }
+
+}
+```
 
 ## Assignment Alignment
 variables
