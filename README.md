@@ -70,10 +70,19 @@ define( "GLOBAL_VAR", null );
 //
 class foo() {
 
+  //
+  //  A public variable
+  //
   $m_publicVariable;
 
+  //
+  // Can use $mp_ also
+  //
   private $m_privateVariable;
 
+  //
+  //  Example for static variables within a class
+  //
   static public $variableName;
   static private $ms_variableName;
 
@@ -83,7 +92,7 @@ class foo() {
     //  @NOTE: This is not same as self::$variableName which is static and
     //  should be called in a static function
     //
-    $variableName;
+    $variableName  = null;
 
   }
 
@@ -92,8 +101,30 @@ class foo() {
 
 It is absolutely OK to use simple variables such as ```$i, $j, $k``` in the context of loops and other logical blocks if it is clear how it is used and does not cause conflict. It is still recommended to be used sparingly and only when necessary.
 
-## Class & Function Guidelines
-general
+## Function & Class Guidelines
+```PHP
+//
+//  The best way to show the guidelines is  to show it in the context of a 
+//  function. When declaring functions the name should follow the standard
+//  guideline provided, which is to use camel notation.
+//
+//  Also, following the standard guideline the opening { should be in line
+//  with the function declaration. If the function uses parameters the ( )
+//  needs to be padded with \s(space), and a \s(space) between each of the
+//  parameters.
+//
+//  Finally, there should be a  line space after the opening { and closing
+//  }, while ensuring the } is inline with the function
+//
+function someFunctionName( $arg1, $arg2 ) {
+
+  //
+  //  Notice the space above and below this section
+  //  
+  ...
+
+}
+```
 class functions
   general
   private
