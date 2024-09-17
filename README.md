@@ -44,6 +44,9 @@ Following the general guidelines, all variables should be declared using camel c
 $var      = true;
 $varName  = false;
 ```
+
+Variable names should be descriptive or use abbreviations with comments identifying their use if not obvious from the name. Names should not be long and should be no longer than 20 letters (max).
+
 ### Variable Scope
 The scope of a variable will determine certain prefixes and notation for a given variable name:
 - **Global** - Generally global variables are considered to be unaceptable in the code, but in some cases they are a necessary evil, so in these instances a global variable can be declared using the ```$g_```
