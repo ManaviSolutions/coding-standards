@@ -185,7 +185,7 @@ function foo() {
         //
         //  This variable's = is aligned with the = 'b' assignment
         //
-        $someVariable1      = 1;
+        $someVariable1          = 1;
     
         while ( ... ) {
     
@@ -198,7 +198,7 @@ function foo() {
             //
             //  This variable's = is aligned with the = 'b' assignment
             //
-            $someVariable3    = 'a';
+            $someVariable3      = 'a';
     
         }
   
