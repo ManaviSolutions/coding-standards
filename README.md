@@ -237,6 +237,17 @@ function foo() {
         [ "example2",   "moreParams",    2  ],
 
     ];
+
+    $newArray        = [
+
+        //
+        //  It is not necessary to add extra space for nested arrays
+        //
+        "inArray"    => [
+            "x"      => "y"
+        ]
+
+    ];
     
     return;
 
